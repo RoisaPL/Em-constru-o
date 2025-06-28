@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site em Construção</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #ffffff; /* Fundo branco */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 2;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(8px);
+            max-width: 80%;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            background: linear-gradient(135deg, #FF66B2 0%, #5BCEFA 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        p {
+            color: #5A2E7A;
+            font-size: 1.3em;
+            margin: 15px 0;
+            line-height: 1.6;
+            position: relative;
+            display: inline-block;
+            padding: 0 10px;
+        }
+
+        p:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #FF66B2 0%, #5BCEFA 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+    p:hover:after {
+        transform: scaleX(1);
+    }
+
+        /* Fitas de construção modernas (rosa/azul) */
+        .construction-tape {
+            position: absolute;
+            width: 150%;
+            height: 40px;
+            background: repeating-linear-gradient(
+                45deg,
+                #FF66B2,
+                #FF66B2 25px,
+                #5BCEFA 25px,
+                #5BCEFA 50px
+            );
+            opacity: 0.3; /* Mais transparente para fundo branco */
+            transform: rotate(-4deg);
+            z-index: 1;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .tape-1 {
+            top: 15%;
+            left: -20%;
+        }
+
+        .tape-2 {
+            top: 50%;
+            left: -10%;
+            transform: rotate(5deg);
+            background: repeating-linear-gradient(
+                -45deg,
+                #5BCEFA,
+                #5BCEFA 25px,
+                #FF66B2 25px,
+                #FF66B2 50px
+            );
+        }
+
+        .tape-3 {
+            bottom: 20%;
+            right: -15%;
+            transform: rotate(-6deg);
+        }
+
+        /* Efeito de brilho sutil */
+        .glow {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255, 102, 178, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .glow-1 {
+            top: -50px;
+            left: -50px;
+        }
+
+        .glow-2 {
+            bottom: -30px;
+            right: -20px;
+            background: radial-gradient(circle, rgba(91, 206, 250, 0.1) 0%, transparent 70%);
+        }
+    </style>
+</head>
+<body>
+    <!-- Efeitos de brilho -->
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+
+    <!-- Fitas de construção -->
+    <div class="construction-tape tape-1"></div>
+    <div class="construction-tape tape-2"></div>
+    <div class="construction-tape tape-3"></div>
+
+    <!-- Mensagem central -->
+    <div class="container">
+        <h1>Site em Construção</h1>
+        <p>Estamos a preparar algo especial para si.</p><br>
+        <p>Em breve teremos novidades — fique atento!</p>
+    </div>
+</body>
+</html>
